@@ -14,8 +14,6 @@ class Solution:
 
 
         output.append(s[left:right+1][::-1])
-                
-        print(" ".join(output))
         return " ".join(output)
 
 
