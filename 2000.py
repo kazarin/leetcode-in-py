@@ -1,5 +1,3 @@
-from typing import List
-from math import floor
 import unittest
         
 class Solution:
