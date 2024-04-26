@@ -1,5 +1,7 @@
 from typing import List
 import unittest
+
+
 class Solution:
     def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
         if k <= 1:
@@ -12,18 +14,16 @@ class Solution:
             while product >= k:
                 product /= nums[left]
                 left += 1
-            output += right-left + 1
+            output += right - left + 1
 
         return output
-        
+
 
 class TestSolution(unittest.TestCase):
     def runTest(self):
         solution = Solution()
-        self.assertEqual(solution.numSubarrayProductLessThanK([10,5,2,6], 100), 8)
-        self.assertEqual(solution.numSubarrayProductLessThanK([1,2,3], 0), 0)
-
+        self.assertEqual(solution.numSubarrayProductLessThanK([10, 5, 2, 6], 100), 8)
+        self.assertEqual(solution.numSubarrayProductLessThanK([1, 2, 3], 0), 0)
 
 
 unittest.main()
-        

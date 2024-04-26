@@ -1,5 +1,6 @@
 import unittest
-        
+
+
 class Solution:
     def reverseOnlyLetters(self, s: str) -> str:
         output = list(s)
@@ -17,14 +18,15 @@ class Solution:
 
         return "".join(output)
 
+
 class TestSolution(unittest.TestCase):
     def runTest(self):
         solution = Solution()
         self.assertEqual(solution.reverseOnlyLetters("ab-cd"), "dc-ba")
         self.assertEqual(solution.reverseOnlyLetters("a-bC-dEf-ghIj"), "j-Ih-gfE-dCba")
-        self.assertEqual(solution.reverseOnlyLetters("Test1ng-Leet=code-Q!"), "Qedo1ct-eeLg=ntse-T!")
-
+        self.assertEqual(
+            solution.reverseOnlyLetters("Test1ng-Leet=code-Q!"), "Qedo1ct-eeLg=ntse-T!"
+        )
 
 
 unittest.main()
-        

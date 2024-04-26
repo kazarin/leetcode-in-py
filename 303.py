@@ -1,6 +1,7 @@
 from typing import List
 import unittest
-        
+
+
 class NumArray:
     def __init__(self, nums: List[int]):
         self.sums = [nums[0]]
@@ -11,7 +12,7 @@ class NumArray:
     def sumRange(self, left: int, right: int) -> int:
         return self.sums[right] - self.sums[left] + self.nums[left]
 
-         
+
 class TestSolution(unittest.TestCase):
     def runTest(self):
         cmd = ["NumArray", "sumRange", "sumRange", "sumRange"]
@@ -25,5 +26,5 @@ class TestSolution(unittest.TestCase):
 
         self.assertEqual(expected, [None, 1, -1, -3])
 
+
 unittest.main()
-        

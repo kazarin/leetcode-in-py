@@ -1,6 +1,7 @@
 from typing import List
 import unittest
-        
+
+
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
         sums = [nums[0]]
@@ -12,13 +13,14 @@ class Solution:
                 return left
 
         return -1
-         
+
+
 class TestSolution(unittest.TestCase):
     def runTest(self):
         solution = Solution()
-        self.assertEqual(solution.pivotIndex([1,7,3,6,5,6]), 3)
-        self.assertEqual(solution.pivotIndex([1,2,3]), -1)
-        self.assertEqual(solution.pivotIndex([2,1,-1]), 0)
+        self.assertEqual(solution.pivotIndex([1, 7, 3, 6, 5, 6]), 3)
+        self.assertEqual(solution.pivotIndex([1, 2, 3]), -1)
+        self.assertEqual(solution.pivotIndex([2, 1, -1]), 0)
+
 
 unittest.main()
-        

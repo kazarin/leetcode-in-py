@@ -1,5 +1,6 @@
 import unittest
-        
+
+
 class Solution:
     def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
         left = 0
@@ -14,8 +15,8 @@ class Solution:
 
             answer = max(right - left + 1, answer)
         return answer
-        
-        
+
+
 class TestSolution(unittest.TestCase):
     def runTest(self):
         solution = Solution()
@@ -24,5 +25,5 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(solution.equalSubstring("abcd", "acde", 0), 1)
         self.assertEqual(solution.equalSubstring("abcd", "cdef", 1), 0)
 
+
 unittest.main()
-        

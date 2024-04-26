@@ -1,4 +1,6 @@
 import unittest
+
+
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         i = j = 0
@@ -18,4 +20,3 @@ class TestSolution(unittest.TestCase):
 
 
 unittest.main()
-        

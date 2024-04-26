@@ -1,6 +1,7 @@
 from typing import List
 import unittest
-        
+
+
 class Solution:
     def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
         left = 0
@@ -14,15 +15,14 @@ class Solution:
                 left += 1
 
         return -1
-        
+
+
 class TestSolution(unittest.TestCase):
     def runTest(self):
         solution = Solution()
-        self.assertEqual(solution.getCommon([1,2,3], [2,4]), 2)
-        self.assertEqual(solution.getCommon([1,2,3,6], [2,3,4,5]), 2)
-        self.assertEqual(solution.getCommon([7,8,9], [2,3,4]), -1)
-
+        self.assertEqual(solution.getCommon([1, 2, 3], [2, 4]), 2)
+        self.assertEqual(solution.getCommon([1, 2, 3, 6], [2, 3, 4, 5]), 2)
+        self.assertEqual(solution.getCommon([7, 8, 9], [2, 3, 4]), -1)
 
 
 unittest.main()
-        
