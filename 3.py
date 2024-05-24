@@ -1,19 +1,17 @@
 import unittest
-from collections import defaultdict
+from collections import Counter
 
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        seen = defaultdict(int)
+        seen = Counter()
         left = 0
         answer = 0
 
         for right in range(len(s)):
             seen[s[right]] += 1
-            while set(seen.values()) != {1} and left < right:
+            while seen[s[right]] > 1:
                 seen[s[left]] -= 1
-                if seen[s[left]] == 0:
-                    del seen[s[left]]
                 left += 1
 
             answer = max(answer, right - left + 1)
