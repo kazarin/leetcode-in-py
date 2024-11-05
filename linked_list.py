@@ -13,6 +13,21 @@ class ListNode:
         return result
 
 
+class CycledLinkedList:
+    def __init__(self, values, pos):
+        self.head = LinkedList(values).head
+        current = self.head
+        loop = None
+        if pos != -1:
+            i = 0
+            while current.next:
+                if i == pos:
+                    loop = current
+                current = current.next
+                i += 1
+            current.next = loop
+
+
 class LinkedList:
     def __init__(self, values):
         self.head = ListNode(values[0])
